@@ -1,0 +1,435 @@
+#chatContainer {
+    display: none;
+}
+
+#chatContainer .mytext{
+    display: inline-block;
+    width: 75%;
+    border:0;
+    padding:10px;
+    background:whitesmoke;
+}
+#chatContainer .text{
+    width:75%;
+    display:flex;
+    flex-direction:column;
+    padding-left: 13px;
+}
+#chatContainer .text > p:first-of-type{
+    width:100%;
+    margin-top:0;
+    margin-bottom:auto;
+    line-height: 13px;
+    font-size: 12px;
+}
+#chatContainer .text > p:last-of-type{
+    width:100%;
+    text-align:right;
+    color:silver;
+    margin-bottom:-7px;
+    margin-top:auto;
+}
+#chatContainer .text-l{
+    float:left;
+    padding-right:10px;
+}        
+#chatContainer .text-r{
+    float:right;
+    padding-left:10px;
+}
+#chatContainer .avatar{
+    width:70px;    
+    height: 70px;
+    background-color: #d0cfcf;
+    border-radius: 50%;
+}
+
+#chatContainer .avatar img {
+    width: 100%;
+    height: 100%;
+}
+
+#chatContainer .macro{
+    position: relative;
+    display:flex;
+    width:85%;        
+    margin-top: 12px;
+    border-radius:5px;
+    padding:5px;
+}
+#chatContainer .msj-rta{
+    float:right;background:whitesmoke;
+}
+#chatContainer .msj{
+    float:left;background:white;
+}
+
+#chatContainer .msj-box {
+    float:right;background:#e2e2e2;
+    position: relative;
+}
+
+#chatContent .box-name {
+    position: absolute;
+    top: -7px;   
+    margin-top: -15px;
+    padding: 1%;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #38536f;
+    border-radius: 8px; 
+    color: #fff;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+#chatContent .box-name:after{
+    width: 0;
+    height: 0;
+    content:"";
+    top: 16px;
+    left: 5px;
+    position: absolute;
+    border-style: solid;
+    border-width: 13px 13px 0 0;
+    border-color: #38536f transparent transparent transparent; 
+}
+
+/*#chatContent .box-name:before{
+    width: 0;
+    height: 0;
+    content:"";
+    top: 25px;
+    left: 28px;
+    position:relative;
+    border-style: solid;
+    border-width: 10px 0 0 10px;
+    border-color: #38536f transparent transparent transparent; 
+}*/
+
+#chatContainer .frame{
+    /* visibility: hidden; */
+    position: relative;
+    /* left: 50%; */
+    /* top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background: #f7f6f6b8;
+    height:450px;
+    overflow:hidden;
+    padding:0;
+    border-radius: 10px;
+}
+
+#chatContainer .frame:hover{
+    /* visibility: visible; */
+}
+
+#chatContainer .frame > div:last-of-type{
+    position:absolute;bottom:0;width:100%;display:flex;
+}
+#chatContainer .btnSend{
+    background: #2f2f2f;padding: 10px;font-size: 21px;border-radius: 50%; color: white;
+}
+body > div > div > div.msj-rta.macro{
+    margin:auto;margin-left:1%;
+}
+
+#chatContainer #chatContent ul {
+    width:100%;
+    list-style-type: none;
+    padding:18px;
+    bottom:47px;
+    position:absolute;    
+    display:flex;
+    flex-direction: column;
+    top:0;
+    overflow-y:scroll;
+}
+
+#chatContainer #users{
+    width:100%;
+    list-style-type: none;
+    padding:18px;
+    bottom:47px;
+}
+
+#chatContainer input:focus{
+    outline: none;
+}        
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #d4d4d4;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #d4d4d4;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #d4d4d4;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #d4d4d4;
+}  
+
+#chatContainer .box-acctions {
+    position: absolute;
+    right: 0;
+    /* top: 20px; */
+    bottom: 0px;
+    width: 35px;
+    height: 35px;
+    text-align:center;
+    cursor: pointer;
+    
+    background: rgb(235, 192, 52);
+    border: none;
+    border-radius: 50%;
+    -webkit-transition: 0.7s all ease;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+}
+
+#chatContainer .box-acctions:hover{
+    background: #ffa919;
+}
+
+
+#box-emojis {
+    /* display: none; */
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 53%;
+    /* background-color: #6968684d; */
+    width: 230px;
+    height: 140px;
+    overflow: visible;
+    border-radius: 8px;
+    /* border: 1px solid rgb(150, 150, 150); */
+
+    /* -webkit-animation: bounceInUp 2s; */
+
+    /* Flex box*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#box-emojis .emoji{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    -webkit-transition: 0.7s all ease;
+    -o-transition: 0.2s all ease;
+    transition: 0.2s all ease;
+}
+
+
+#box-emojis .emoji:hover {
+    transform: scale(1.3);
+}
+
+ #messageForm .emoji {
+    vertical-align: top;
+    max-height: 1.4em;
+    max-width: 1.4em;
+ }
+
+ #chatContainer #chat .emoji {
+    vertical-align: top;
+    max-height: 20px;
+    max-width: 20px;
+}
+
+ [contenteditable] {
+  border: 1px solid #000;
+  line-height: 1.4em;
+  -webkit-appearance: textfield;
+  appearance: textfield
+}
+
+
+
+/* bounceInUp */
+@keyframes bounceInUp {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    from {
+      opacity: 0;
+      transform: translate3d(0, 3000px, 0);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -20px, 0);
+    }
+  
+    75% {
+      transform: translate3d(0, 10px, 0);
+    }
+  
+    90% {
+      transform: translate3d(0, -5px, 0);
+    }
+  
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .bounceInUp {
+    animation-name: bounceInUp;
+  }
+
+  .animated {
+      animation-duration: 0.3s;
+      animation-fill-mode: both;
+  }
+
+  /* fadeInUp */
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    animation-name: fadeInUp;
+  }
+
+
+  /* fadeOutDown */
+
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+  
+  .fadeOutDown {
+    animation-name: fadeOutDown;
+  }
+
+/* Wave */
+.col-smw-2 {
+	padding: 10px;
+	border-radius: 4px;
+	height: 125px;
+	margin-bottom: 10px;
+}
+
+.sp {
+	width: 32px;
+	height: 32px;
+	clear: both;
+	margin: 20px auto;
+}
+
+
+.sp-wave {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+	border-radius: 50%;
+	position: relative;
+	opacity: 1;
+}
+.sp-wave:before, .sp-wave:after  {
+	content:'';
+	border: 3px #12d9dc solid;
+	border-radius: 50%;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left:0px;
+}
+.sp-wave:before {
+	transform: scale(1,1);
+	opacity: 1;
+	-webkit-animation: spWaveBe 1.2s infinite linear;
+	animation: spWaveBe 1.2s infinite linear;
+}
+.sp-wave:after {
+	transform: scale(0,0);
+	opacity: 0;
+	-webkit-animation: spWaveAf 1.2s infinite linear;
+	animation: spWaveAf 1.2s infinite linear;
+}
+
+@-webkit-keyframes spWaveAf {
+	from { -webkit-transform: scale(0.1,0.1); opacity: 0; }
+	to { -webkit-transform: scale(1,1); opacity: 1; }
+}
+@keyframes spWaveAf {
+	from { transform: scale(0.1,0.1); opacity: 0; }
+	to { transform: scale(1,1); opacity: 1; }
+}
+@-webkit-keyframes spWaveBe {
+	from { -webkit-transform: scale(1,1); opacity: 1; }
+	to { -webkit-transform: scale(1.5,1.5); opacity: 0; }
+}
+@keyframes spWaveBe {
+	from { -webkit-transform: scale(1,1); opacity: 1; }
+	to { -webkit-transform: scale(1.5,1.5); opacity: 0; }
+}
+
+/* bounceIn */
+@keyframes bounceIn {
+  from,
+  20%,
+  40%,
+  60%,
+  80%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  20% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  40% {
+    transform: scale3d(0.9, 0.9, 0.9);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale3d(1.03, 1.03, 1.03);
+  }
+
+  80% {
+    transform: scale3d(0.97, 0.97, 0.97);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.bounceIn {
+  animation-duration: 0.75s;
+  animation-name: bounceIn;
+}
